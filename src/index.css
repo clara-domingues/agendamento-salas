@@ -1,0 +1,15 @@
+/* Botão de Cancelar em Minhas Reservas */
+.btn-danger {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}

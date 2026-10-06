@@ -1,0 +1,212 @@
+:root {
+  --primary-dark: #0f172a;
+  --primary: #1e3a8a;
+  --primary-accent: #2563eb;
+  --primary-light: #3b82f6;
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  
+  /* Status Colors */
+  --status-free-bg: #dcfce7;
+  --status-free-text: #15803d;
+  --status-busy-bg: #fee2e2;
+  --status-busy-text: #b91c1c;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-main);
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+#app {
+  max-width: 650px;
+  width: 100%;
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header & Nav */
+h1 {
+  color: var(--primary-dark);
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: var(--primary);
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 14px;
+}
+
+nav button {
+  background-color: #f1f5f9;
+  color: var(--primary-dark);
+  border: 1px solid var(--border);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+nav button:hover {
+  background-color: #e2e8f0;
+  color: var(--primary-accent);
+}
+
+/* User Header Info */
+#home-view p {
+  color: var(--text-muted);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+#logout-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#logout-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Forms & Controls */
+.form-group, label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-dark);
+}
+
+input, select {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: #f8fafc;
+}
+
+input:focus, select:focus {
+  border-color: var(--primary-light);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+button[type="submit"], #signup-btn {
+  background-color: var(--primary-accent);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+}
+
+button[type="submit"]:hover, #signup-btn:hover {
+  background-color: var(--primary);
+}
+
+/* List Formatting */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+li:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Status Badges / Tags */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-badge.livre {
+  background-color: var(--status-free-bg);
+  color: var(--status-free-text);
+}
+
+.status-badge.ocupado {
+  background-color: var(--status-busy-bg);
+  color: var(--status-busy-text);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-badge.livre .status-dot {
+  background-color: #22c55e;
+}
+
+.status-badge.ocupado .status-dot {
+  background-color: #ef4444;
+}
+
+.hora-texto {
+  font-weight: 600;
+  color: var(--primary-dark);
+}

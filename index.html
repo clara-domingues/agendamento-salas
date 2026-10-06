@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento de Salas</title>
+  </head>
+  <link rel="stylesheet" href="./style.css">
+  <body>
+    <main id="app">
+      <section id="login-view">
+        <h1>Agendamento de Salas</h1>
+        <form id="login-form">
+          <label>E-mail
+            <input type="email" id="email" required />
+          </label>
+          <label>Senha
+            <input type="password" id="password" required minlength="6" />
+          </label>
+          <button type="submit">Entrar</button>
+          <button type="button" id="signup-btn">Criar conta</button>
+          <p id="message" role="alert"></p>
+        </form>
+      </section>
+
+      <section id="home-view" hidden>
+        <header class="topbar">
+          <strong>Agendamento de Salas</strong>
+          <nav>
+            <button data-view="disponibilidade">Disponibilidade</button>
+            <button data-view="nova">Nova reserva</button>
+            <button data-view="minhas">Minhas reservas</button>
+          </nav>
+          <div class="user-box">
+            <span id="user-email"></span>
+            <button id="logout-btn">Sair</button>
+          </div>
+        </header>
+
+        <section id="view-disponibilidade" class="view">
+          <h2>Disponibilidade</h2>
+          <p>Em construção.</p>
+        </section>
+
+        <section id="view-nova" class="view" hidden>
+          <h2>Nova reserva</h2>
+          <p>Em construção.</p>
+        </section>
+
+        <section id="view-minhas" class="view" hidden>
+          <h2>Minhas reservas</h2>
+          <p>Em construção.</p>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
